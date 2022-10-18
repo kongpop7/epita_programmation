@@ -28,12 +28,8 @@ int array_sum(int *begin, int *end)
 {
 	// TODO
 	int sum = 0 ;
-	while(1){
-		if(*begin == *end){
-			break;
-		}
-		sum = sum + *begin;
-		begin++;
+	for(int*p = begin; p<end; p++){
+		sum = sum + *p;
 	}
 	return sum;
 }
@@ -42,13 +38,8 @@ int array_sum(int *begin, int *end)
 void array_reverse(int *begin, int *end)
 {
 	// TODO
-	while(1){
-		if(*begin == *end){
-			break;
-		}
-		swap(begin,end-1);
-		begin++;
-		end--;
+	for(int*p = begin ; p < begin + (end-begin)/2;p++){
+		swap(p,end-(p-begin)-1);
 	}
 
 }
