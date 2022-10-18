@@ -51,13 +51,9 @@ void array_copy(int *dst, int *begin, int *end)
 {
 	// TODO
 	dst = copy;
-	while(1){
-		if(*begin == *end){
-			break;
-		}
-		*dst = *begin;
+	for(int*p = begin; p < end; p++){
+		*dst = *p;
 		dst++;
-		begin++;	
 	}
 }
 
